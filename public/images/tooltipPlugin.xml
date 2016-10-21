@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4.8" type="plugin" group="content" method="upgrade">
+	<name>PLG_TOOLTIPPLUGIN</name>
+	<creationDate>17.10.16</creationDate>
+	<author>marcin</author>
+	<authorEmail>your@email.com</authorEmail>
+	<authorUrl>http://your.url.com</authorUrl>
+	<copyright>A copyright</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>PLG_TOOLTIPPLUGIN_XML_DESCRIPTION</description>
+
+	<!-- Scripts to run on installation -->
+	<scriptfile></scriptfile>
+
+	<!-- Language files -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_tooltipPlugin.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_tooltipPlugin.sys.ini</language>
+	</languages>
+
+	<!-- Plugin files -->
+	<files>
+		<filename plugin="tooltipPlugin">tooltipPlugin.php</filename>
+	</files>
+
+	<!-- Config parameter -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="sample"
+					type="text"
+					default="42"
+					label="PLG_TOOLTIPPLUGIN_SAMPLE_LABEL"
+					description="PLG_TOOLTIPPLUGIN_SAMPLE_DESCRIPTION"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+	<!-- Update servers -->
+	<updateservers>
+		<server type="extension" priority="1" name="tooltipPlugin">https://www.example.com/plg_tooltipPlugin.xml</server>
+	</updateservers>
+</extension>
