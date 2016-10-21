@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Notification;
-use Illuminate\Http\Request;
-use Carbon\Carbon;
-
 use App\Http\Requests;
+use App\Notification;
+use Carbon\Carbon;
 
 class RegistrationController extends Controller
 {
@@ -29,7 +27,7 @@ class RegistrationController extends Controller
 
         \Session::flash('flash_message', 'Udało się zweryfikować konto');
 
-        return redirect('/');
+        return view('/front/thanks');
 
     }
 }

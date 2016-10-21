@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Notification;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Validator;
 use Mail;
+use Validator;
 
 class HomeController extends Controller
 {
@@ -61,6 +62,7 @@ class HomeController extends Controller
             $notification->slogan = $request->slogan;
             $notification->email = $request->email;
             $notification->confirmation_code = $confirmation_code;
+            $notification->created_at = Carbon::now('Europe/Warsaw');
 
             $notification->save();
 

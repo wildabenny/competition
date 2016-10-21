@@ -8,8 +8,7 @@
 
 <div>
 
-    Thanks for creating an account with the verification demo app.
-    Please follow the link below to verify your email address
+    Dziękujemy za wysłanie zgłoszenia do konkursu, prosimy o potwierdzenie adresu email, klikając w poniższy link
     {{ URL::to('register/verify/' . $confirmation_code) }}.<br/>
 
 </div>

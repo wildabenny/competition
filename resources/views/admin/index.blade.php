@@ -2,11 +2,12 @@
 
 @section('content')
 
-    <div class="panel panel-default">
-        <div class="panel-heading" style="text-align: center">Zgłoszenia</div>
-    </div>
-
     <div class="container">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" style="text-align: center">Zgłoszenia</div>
+        </div>
+
         <table class="table">
             <thead class="thead-inverse">
             <tr>

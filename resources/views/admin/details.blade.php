@@ -2,11 +2,6 @@
 
 @section('content')
 
-    <div class="col-md-6 col-md-offset-3">
-
-    </div>
-
-
     <div class="container">
 
         <div class="panel panel-default">
@@ -49,7 +44,7 @@
             </tbody>
         </table>--}}
 
-        <div class="panel panel-default">
+        {{--<div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Dane kontaktowe</h3>
             </div>
@@ -89,7 +84,27 @@
             <div class="panel-body">
                 <a href="/images/{{$notification->fileurl}}">{{$notification->fileurl}}</a>
             </div>
-        </div>
+        </div>--}}
+
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Imię:</strong> {{$notification->name}}</li>
+            <li class="list-group-item"><strong>Nazwisko:</strong> {{$notification->surname}}</li>
+            <li class="list-group-item"><strong>Mail:</strong> {{$notification->email}}</li>
+            <li class="list-group-item"><strong>Kod pocztowy:</strong> {{$notification->zipcode}}</li>
+            <li class="list-group-item"><strong>Miasto:</strong> {{$notification->city}}</li>
+            <li class="list-group-item"><strong>Hasło konkursowe:</strong> {{$notification->slogan}}</li>
+            <li class="list-group-item"><strong>Data zgłoszenia:</strong> {{$notification->created_at}}</li>
+            <li class="list-group-item"><strong>Potwierdzone:</strong>
+                @if($notification->confirmed == 1)
+                    {{$notification->created_at}}
+                @else
+                    Nie potwierdzone
+                @endif
+            </li>
+            <li class="list-group-item"><strong>Załącznik:</strong>
+                <a href="/images/{{$notification->fileurl}}">{{$notification->fileurl}}</a>
+            </li>
+        </ul>
 
     </div>
 @endsection
