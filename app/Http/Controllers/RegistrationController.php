@@ -11,13 +11,13 @@ class RegistrationController extends Controller
     public function confirm($confirmation_code)
     {
         if (! $confirmation_code) {
-            echo "brak kodu";
+            throw new \Exception("Brak kodu");
         }
         $notification = Notification::where('confirmation_code', 'like', $confirmation_code)
             ->first();
 
         if (! $notification) {
-            echo "brak zgłoszenia";
+            throw new \Exception("brak zgłoszenia");
         }
 
         $notification->confirmed = 1;
