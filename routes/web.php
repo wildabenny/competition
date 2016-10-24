@@ -40,6 +40,11 @@ Route::group(['prefix' => 'administrator'], function () {
         'uses' => 'AdministratorController@details'
     ]);
 
+    Route::get('/export', [
+        'as' => 'export',
+        'uses' => 'AdministratorController@export'
+    ]);
+
     Auth::routes();
 });
 

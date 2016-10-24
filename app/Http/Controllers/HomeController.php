@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Notification;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Mail;
 use Validator;
 
@@ -50,7 +51,7 @@ class HomeController extends Controller
         }
         $confirmation_code = str_random(30);
 
-        if ($request->fileurl) {
+        if (Input::hasFile('fileurl')) {
             $file = $request->file('fileurl');
             $fileName = $file->getClientOriginalName();
             $file->move(public_path('images'), $fileName);
@@ -76,4 +77,5 @@ class HomeController extends Controller
         return redirect('/');
 
     }
+
 }

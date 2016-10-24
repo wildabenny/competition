@@ -75,8 +75,7 @@
                 <label class="col-xs-2">Tekst hasła</label>
                 <div class="col-xs-10">
                     <textarea name="slogan" class="form-control" placeholder="Długa nazwa" type="text"
-                              value="{{old('slogan')}}">
-                    </textarea>
+                              value="{{old('slogan')}}"></textarea>
                 </div>
             </div>
 

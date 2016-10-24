@@ -21,6 +21,7 @@
 
             <ul class="nav nav-tabs" style="">
                 <li role="presentation"><a href="{{url('/administrator/index')}}">Home</a></li>
+                <li role="presentation"><a href="{{route('export')}}">Export</a></li>
             </ul>
 
         </div>
