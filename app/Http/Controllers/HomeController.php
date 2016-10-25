@@ -36,7 +36,7 @@ class HomeController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'surname' => 'required',
-            'email' => 'required|unique:notifications',
+            'email' => 'required|email|unique:notifications',
             'city' => 'required',
             'zipcode' => 'required|max:6',
             'slogan' => 'required',

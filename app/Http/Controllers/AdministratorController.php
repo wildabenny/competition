@@ -89,6 +89,8 @@ class AdministratorController extends Controller
 
         }
 
+        \Session::flash('flash_message', 'Dane wyeksportowane');
+
         return redirect('/');
     }
 }
